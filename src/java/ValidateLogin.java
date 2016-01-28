@@ -73,24 +73,29 @@ public class ValidateLogin extends HttpServlet {
             sql = "SELECT idUsers, usersEmail, usersPassword FROM users";
             query = "SELECT * FROM users where usersEmail='" + email + "' and usersPassword='" + password + "'";
             ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs1 = stmt.executeQuery(query);
            // ResultSet rs1 = stmt.executeQuery(query);
-            
-     
+            if(rs1.next()){
+            out.println("Bienvenue ");
+            }else{
+                out.println("Erreur de connexion");
+            }
+    
             
 
             //STEP 5: Extract data from result set
-            while (rs.next()) {
-                //Retrieve by column name
-                int id = rs.getInt("idUsers");
-
-                String usersEmail = rs.getString("usersEmail");
-                String usersPassword = rs.getString("usersPassword");
-
-                //Display values
-                out.println("ID: " + id + "");
-                out.println(", usersEmail : " + usersEmail + "");
-                out.println(", usersPassword " + usersPassword + "");
-            }
+//            while (rs.next()) {
+//                //Retrieve by column name
+//                int id = rs.getInt("idUsers");
+//
+//                String usersEmail = rs.getString("usersEmail");
+//                String usersPassword = rs.getString("usersPassword");
+//
+//                //Display values
+//                out.println("ID: " + id + "");
+//                out.println(", usersEmail : " + usersEmail + "");
+//                out.println(", usersPassword " + usersPassword + "");
+//            }
 
              out.println("email : " + email + "");
                out.println("pwd : " + password + "");
@@ -98,7 +103,7 @@ public class ValidateLogin extends HttpServlet {
             out.println("</html>");
             //STEP 6: Clean-up environment
             rs.close();
-          //  rs1.close();
+            rs1.close();
             stmt.close();
             conn.close();
         } catch (SQLException se) {
