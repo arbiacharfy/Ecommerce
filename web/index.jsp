@@ -53,8 +53,7 @@
                         </li>
                         <li><a href="contact.html">Contact</a>
                         </li>
-                        <li><a href="#">Recently viewed</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -134,13 +133,13 @@
                                             <div class="col-sm-3">
                                                 <h5>Clothing</h5>
                                                 <ul>
-                                                    <li><a href="category.html">T-shirts</a>
+                                                    <li><a href="./Pages_Web/category.html">T-shirts</a>
                                                     </li>
-                                                    <li><a href="category.html">Shirts</a>
+                                                    <li><a href="./Pages_Web/category.html">Shirts</a>
                                                     </li>
-                                                    <li><a href="category.html">Pants</a>
+                                                    <li><a href="./Pages_Web/category.html">Pants</a>
                                                     </li>
-                                                    <li><a href="category.html">Accessories</a>
+                                                    <li><a href="./Pages_Web/category.html">Accessories</a>
                                                     </li>
                                                 </ul>
                                             </div>
